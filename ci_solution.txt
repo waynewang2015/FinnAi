@@ -1,0 +1,14 @@
+Assume that we already have a Jenkins server running on the backend and a virtual machine with chromedriver installed.
+
+- Log into Jenkins. On the dashboard, add a new item.
+- Name the new item "autoGoogleSearch".
+- Select the "Git", input the URL of the github repo, and select the branch "main".
+- Add user name and password to access to the remote git repo.
+- Under "Build" part, select "Execute Windows batch command".
+- Enter the following command:
+	pip install selenium
+	pip install beautifulsoup4
+	python finn_problem_bingzhen.py "Finn AI | The Leading" "AI chatbot" "bank chatbot"
+- After saving the job, click "Build now" to start the job immediately.
+- Click this build in the "Build History" to check the status.
+- Click "Console Output" and check the details of the build.
